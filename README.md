@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# React Posts Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that allows users to create, edit, delete, and display posts. The application uses local storage to persist data across sessions and Redux for state management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Create new posts with a title and content.
+- Edit existing posts.
+- Delete posts.
+- Display a list of posts.
+- Responsive design with Glassmorphism styling.
+- Modal popup for displaying full post content.
+- Persistent data storage using local storage.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ **Clone the repository:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone https://github.com/JayaramHarry/wylo_post_management.git
+cd react-posts-app
 
-### `npm test`
+### Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have Node.js installed.
 
-### `npm run build`
+    npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Application
+    To run the application locally, use the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm start
+    The application will run on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Functionalities
+### Creating a Post:
 
-### `npm run eject`
+Click on the "Create Post" button at the bottom right of the screen.
+Fill in the title and content fields and submit the form.
+The post will be added to the list of posts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Editing a Post:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click on the edit icon (pencil) on the post you want to edit.
+Update the title and/or content in the popup form.
+Submit the form to save changes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Deleting a Post:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Click on the delete icon (trash can) on the post you want to delete.
+The post will be removed from the list.
 
-## Learn More
+### Displaying Posts:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All posts are displayed on the main screen.
+Click on "Read More" to view the full content of a post in a modal popup.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Dependencies
+React
+React Redux
+Redux
+React Router
+React Icons

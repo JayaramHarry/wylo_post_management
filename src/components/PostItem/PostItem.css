@@ -1,0 +1,119 @@
+.post-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  width: 30%;
+  height: 170px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.post-item h3 {
+  margin: 0 0 10px;
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 10px;
+}
+
+.post-item p {
+  margin: 0 0 10px;
+  padding-left: 10px;
+  flex: 1;
+}
+
+.post-item .read-more {
+  color: #a4cdf9;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.post-item .buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.post-item .button {
+  color: #000;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.post-item .button:last-child {
+  color: #ff0119;
+}
+
+.post-item .button:hover {
+  opacity: 0.9;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1000;
+  color: #fff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 768px) {
+  .post-item {
+    width: 90%;
+    max-height: 160px;
+  }
+
+  .post-item .buttons {
+        align-items: center;
+  }
+}
+
+@media (min-width: 778px) and (max-width: 992px) {
+  .post-item {
+    width: 40%;
+    margin: 20px;
+    height: 160px;
+  }
+
+  .post-item .buttons {
+    align-items: center;
+  }
+
+  .post-item h3 {
+    font-size: 16px;
+  }
+
+  .post-item p {
+    font-size: 14px;
+  }
+}
