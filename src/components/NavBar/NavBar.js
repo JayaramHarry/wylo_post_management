@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 
+// NavBar component displays a navigation bar with the heading and a button to create new posts
 const NavBar = () => {
   return (
     <nav className="navbar">
