@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { addPost } from '../../redux/actions';
 import './CreatePost.css';
 
+// CreatePost component provides a form to create new posts
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -12,9 +13,12 @@ const CreatePost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Dispatch the addPost action with the new post data
     dispatch(addPost({ title, content }));
+    // Clear the form fields
     setTitle('');
     setContent('');
+    // Navigate back to the home page
     navigate('/');
   };
 
