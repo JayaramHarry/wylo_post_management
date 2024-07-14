@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import './PostItem.css';
 
 Modal.setAppElement('#root'); // Set the root element for accessibility
-
+// PostItem component displays an individual post with options to edit, delete, and read more
 const PostItem = ({ post }) => {
   const dispatch = useDispatch();
   const [isReadMoreModalOpen, setIsReadMoreModalOpen] = useState(false);
@@ -15,6 +15,7 @@ const PostItem = ({ post }) => {
   const [editTitle, setEditTitle] = useState(post.title);
   const [editContent, setEditContent] = useState(post.content);
 
+  // Handle editing the post
   const handleEdit = () => {
     setIsEditModalOpen(true);
   };
@@ -23,7 +24,7 @@ const PostItem = ({ post }) => {
     dispatch(editPost({ id: post.id, title: editTitle, content: editContent }));
     setIsEditModalOpen(false);
   };
-
+// Handle deleting the post
   const handleDelete = () => {
     dispatch(deletePost(post.id));
   };
