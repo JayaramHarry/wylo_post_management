@@ -8,7 +8,7 @@ const loadPostsFromLocalStorage = () => {
     return [];
   }
 };
-
+// Initial state with posts from local storage or an empty array
 const initialState = {
   posts: loadPostsFromLocalStorage(),
 };
@@ -16,11 +16,12 @@ const initialState = {
 const savePostsToLocalStorage = (posts) => {
   localStorage.setItem('posts', JSON.stringify(posts));
 };
-
+// Reducer function to handle actions and update state
 const reducer = (state = initialState, action) => {
   let newPosts;
   switch (action.type) {
     case ADD_POST:
+      // Add new post to the state and update local storage
       newPosts = [...state.posts, action.payload];
       savePostsToLocalStorage(newPosts);
       return {
@@ -28,6 +29,7 @@ const reducer = (state = initialState, action) => {
         posts: newPosts,
       };
     case EDIT_POST:
+      // Update post in the state and local storage
       newPosts = state.posts.map((post) =>
         post.id === action.payload.id ? action.payload : post
       );
@@ -37,6 +39,7 @@ const reducer = (state = initialState, action) => {
         posts: newPosts,
       };
     case DELETE_POST:
+      // Remove post from the state and local storage
       newPosts = state.posts.filter((post) => post.id !== action.payload);
       savePostsToLocalStorage(newPosts);
       return {
