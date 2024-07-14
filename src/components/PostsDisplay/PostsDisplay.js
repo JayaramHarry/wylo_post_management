@@ -6,6 +6,7 @@ import { FaPlus } from 'react-icons/fa';
 import VectorImg from "../../assets/vector_for_no_data_found.png"
 import './PostsDisplay.css';
 
+// PostsDisplay component displays all posts or a message if there are no posts
 const PostsDisplay = () => {
   const posts = useSelector(state => state.posts);
 
